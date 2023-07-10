@@ -1,5 +1,5 @@
-import styles from './page.module.scss';
-
+import styles from './page.module.scss'
+import {Input} from '@shop-magicbeauty/ui'
 export default async function Index() {
   /*
    * Replace the elements below with your own.
@@ -9,6 +9,7 @@ export default async function Index() {
   return (
     <div className={styles.page}>
       SHOW
+      <Input/>
    </div>
   );
 }
