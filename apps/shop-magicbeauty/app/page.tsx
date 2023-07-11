@@ -1,15 +1,21 @@
 import styles from './page.module.scss'
-import {Input} from '@shop-magicbeauty/ui'
+import {createUser, db} from '@shop-magicbeauty/services'
+
+
 export default async function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.scss file.
-   */
+  const users = await db.user.findMany()
   return (
     <div className={styles.page}>
-      SHOW
-      <Input/>
+      <form action={createUser}>
+        <input placeholder='Email' name="email" />
+        <input placeholder='name' name="name"/>
+        <button>ADD</button>
+      </form>
+      {users.map(user =>
+        <div key={user.id}>
+        {user.id} {user.name} {user.email}
+        </div>
+      )}
    </div>
   );
 }

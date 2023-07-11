@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@shop-magicbeauty/services": ["libs/services/src/index.ts"],
       "@shop-magicbeauty/ui": ["libs/ui/src/index.ts"]
     }
   },
