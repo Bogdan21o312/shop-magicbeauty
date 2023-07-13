@@ -1,5 +1,5 @@
+import '../../../libs/common/src/shared/assets/styles/globals.scss';
 import { MainLayout } from '../widgets';
-import './global.css';
 
 export const metadata = {
   title: 'Welcome to shop-magicbeauty',
@@ -14,9 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <MainLayout>
-          {children}
-        </MainLayout>
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   );
