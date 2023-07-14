@@ -15,8 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@shop-magicbeauty/common": ["libs/common/src/index.ts"],
-      "@shop-magicbeauty/services": ["libs/services/src/index.ts"]
+      "@shop-magicbeauty/common": ["libs/common/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
