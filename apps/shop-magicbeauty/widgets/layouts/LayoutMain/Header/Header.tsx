@@ -1,4 +1,5 @@
-import { EntityContainer } from '@shop-magicbeauty/common';
+'use client'
+import { EntityContainer, IconSearch } from '@shop-magicbeauty/common';
 import classes from './Header.module.scss';
 import Link from 'next/link';
 import { HOME_PAGE_URL } from '../../../../shared';
@@ -22,6 +23,11 @@ export function Header() {
             ))}
           </ul>
         </nav>
+        <div className={classes.actions}>
+          <button type='button' className={classes.action}>
+            <IconSearch/>
+          </button>
+        </div>
       </EntityContainer>
     </header>
   );

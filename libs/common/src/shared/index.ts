@@ -2,3 +2,5 @@
 export { Ibg, Wrapper } from './UI';
 // Types
 export { TypeIbg } from './types';
+// Icons
+export { IconSearch, IconCart, IconPhone, IconBookmark } from "./assets"
