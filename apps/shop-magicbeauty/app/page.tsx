@@ -1,21 +1,11 @@
-import styles from './page.module.scss'
-import {createUser, db} from '@shop-magicbeauty/services'
-
+import {PrismaClient} from "@prisma/client";
+const prisma = new PrismaClient()
 
 export default async function Index() {
-  const users = await db.user.findMany()
+  const allUsers = await prisma.user.findMany()
+  console.log(allUsers)
   return (
-    <div className={styles.page}>
-      <form action={createUser}>
-        <input placeholder='Email' name="email" />
-        <input placeholder='name' name="name"/>
-        <button>ADD</button>
-      </form>
-      {users.map(user =>
-        <div key={user.id}>
-        {user.id} {user.name} {user.email}
-        </div>
-      )}
-   </div>
+    <div>
+    </div>
   );
 }

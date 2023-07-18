@@ -43,3 +43,6 @@ Thumbs.db
 
 # ENV
 .env
+
+# .idea
+.idea
