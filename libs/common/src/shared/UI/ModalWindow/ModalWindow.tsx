@@ -1,9 +1,9 @@
 'use client'
-import { useEffect } from "react"
-import { ModalWindowProps } from "./ModalWindowProps";
+import {useEffect} from "react"
+import {ModalWindowProps} from "./ModalWindowProps";
 import classes from "./ModalWindow.module.scss"
 
-export function ModalWindow({ isModalWindow, setModalWindow, hash, title }: ModalWindowProps) {
+export function ModalWindow({isModalWindow, setModalWindow, hash, title}: ModalWindowProps) {
 
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
@@ -32,7 +32,7 @@ export function ModalWindow({ isModalWindow, setModalWindow, hash, title }: Moda
   const handleModalClose = () => {
     setModalWindow(false);
     window.location.hash = '';
-  };
+  }
 
   return (
     <div className={`${classes.main} ${isModalWindow ? classes.open : ''}`}>
