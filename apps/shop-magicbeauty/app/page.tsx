@@ -1,11 +1,18 @@
-import {PrismaClient} from "@prisma/client";
-const prisma = new PrismaClient()
+'use client'
+import {ModalWindow} from "@shop-magicbeauty/common";
+import {useState} from "react";
 
-export default async function Index() {
-  const allUsers = await prisma.user.findMany()
-  console.log(allUsers)
+export default function Index() {
+  const [a, setA] = useState(false)
+  function handle() {
+    setA(true)
+  }
   return (
     <div>
+      <button onClick={handle}>Button</button>
+      <ModalWindow isModalWindow={a} setModalWindow={setA} hash={'some'}>
+        some
+      </ModalWindow>
     </div>
   );
 }

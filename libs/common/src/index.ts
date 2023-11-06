@@ -1,4 +1,11 @@
 // Entites
-export { EntityContainer } from './entites';
+export {EntityContainer} from './entites';
 // Shared
-export { Wrapper, Ibg, IconSearch, IconBookmark, IconPhone, IconCart, IconClose } from './shared';
+export {
+  // UI
+  Wrapper,
+  Ibg,
+  ModalWindow,
+  // Icons
+  IconSearch, IconBookmark, IconPhone, IconCart, IconClose
+} from './shared';
